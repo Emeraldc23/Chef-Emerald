@@ -1,0 +1,50 @@
+.ingredient {
+  max-width: 650px;
+  width: 100%;
+  padding: 0 10px;
+}
+.mainContent {
+  background: #fff;
+  color: #000;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ingredientList {
+  list-style: disc;
+  padding: 0 30px;
+  margin: 0;
+}
+.ingredientList li {
+  padding: 5px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+/*Ask Ai section*/
+.askAi {
+  background: rgb(224, 223, 223);
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.showRecipe {
+  background: red;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.showRecipe:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+  .showRecipe {
+    padding: 5px 10px;
+  }
+}

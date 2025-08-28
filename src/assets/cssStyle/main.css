@@ -1,0 +1,62 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+  margin: 50px auto;
+}
+.inputField {
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+  padding: 0 10px;
+}
+.inputField input {
+  margin-right: 15px;
+  border: 0.5px solid grey;
+  flex: 1 1 auto;
+  max-width: 500px;
+  min-width: 150px;
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+}
+.inputField > .btn-1 {
+  padding: 5px 0;
+  color: #fff;
+  width: 150px;
+  background: #333232;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.inputField > .btn-1::before {
+  content: "+";
+  margin-right: 5px;
+}
+.inputField > .btn-1:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+/*Utility tools*/
+input {
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 20px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+.italics {
+  font-style: italic;
+  margin: 20px;
+}
+@media (max-width: 500px) {
+  .inputField > .btn-1 {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+}
