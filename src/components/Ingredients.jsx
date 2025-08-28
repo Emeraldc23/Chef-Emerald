@@ -13,7 +13,7 @@ export default function Ingredient({ ingredients, getRecipe }) {
             ))}
           </ul>
         </div>
-        {ingredients.length >= 4 && (
+        {ingredients.length >= 2 && (
           <div className="askAi">
             <div className="textContent">
               <h3>Ready for a recipe?</h3>
