@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import MainSection from "./components/Main";
 
 function App() {
-  console.log(import.meta.env.REACT_APP_RECIPE_API);
+  console.log(import.meta.env.VITE_RECIPE_API);
   return (
     <>
       <Header />
