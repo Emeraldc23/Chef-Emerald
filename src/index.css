@@ -19,3 +19,9 @@ body {
   width: 100%;
   margin: 0 auto; */
 }
+@media (max-width: 1200px) {
+  bodys {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}

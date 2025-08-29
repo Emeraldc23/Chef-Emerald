@@ -60,10 +60,40 @@ button {
 .refreshBtn {
   padding: 10px 20px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1500px) {
+  .inputField {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main,
+  .italics,
+  .inputField input {
+    font-size: 30px;
+  }
+  .inputField > .btn-1 {
+    font-size: 30px;
+    width: 250px;
+    padding: 10px;
+  }
+  .refreshBtn {
+    font-size: 30px;
+  }
+}
+@media (max-width: 700px) {
   .inputField > .btn-1,
   .refreshBtn {
     padding: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  .inputField {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main,
+  .italics,
+  .inputField input {
+    font-size: 16px;
   }
 }
