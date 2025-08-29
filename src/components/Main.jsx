@@ -8,9 +8,15 @@ export default function MainSection() {
   const [ingredients, setIngredients] = useState([]);
   const [recipe, setRecipe] = useState("");
   const [updateRecipe, setUpdateRecipe] = useState("");
+  const [showMsg, setShowMsg] = useState("");
+  const message = (
+    <p style={{ color: "white" }}>
+      Please wait while your recipe gets ready...
+    </p>
+  );
 
   async function getRecipe() {
-    setUpdateRecipe("Loading recipe...");
+    setUpdateRecipe("Loading recipe...⏳");
     const response = await getRecipeFromMistral(ingredients);
     setUpdateRecipe(response);
   }
@@ -20,7 +26,16 @@ export default function MainSection() {
     setIngredients(recipeArray);
     setRecipe("");
   }
-
+  function handleDounbleClick() {
+    setShowMsg(message);
+    setTimeout(() => {
+      setShowMsg("");
+    }, 1000);
+  }
+  function reLoadState() {
+    setIngredients("");
+    setUpdateRecipe("");
+  }
   return (
     <main className="main">
       <p className="italics">
@@ -39,9 +54,22 @@ export default function MainSection() {
         </button>
       </form>
       {ingredients.length > 0 && (
-        <Ingredient ingredients={ingredients} getRecipe={getRecipe} />
+        <Ingredient
+          ingredients={ingredients}
+          getRecipe={getRecipe}
+          showMsg={showMsg}
+          handleDounbleClick={handleDounbleClick}
+        />
       )}
-      {updateRecipe && <RecipeComp updateRecipe={updateRecipe} />}
+      {updateRecipe && (
+        <>
+          <RecipeComp updateRecipe={updateRecipe} />{" "}
+          <button onClick={reLoadState} className="refreshBtn">
+            Refresh Page
+          </button>
+        </>
+      )}
+      <p>{showMsg}</p>
     </main>
   );
 }

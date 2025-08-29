@@ -1,6 +1,10 @@
 import "../assets/cssStyle/ingredient.css";
 
-export default function Ingredient({ ingredients, getRecipe }) {
+export default function Ingredient({
+  ingredients,
+  getRecipe,
+  handleDounbleClick,
+}) {
   return (
     <div className="ingredient">
       <>
@@ -19,7 +23,11 @@ export default function Ingredient({ ingredients, getRecipe }) {
               <h3>Ready for a recipe?</h3>
               <div className="aiMsg">Generate a recipe</div>
             </div>
-            <button className="showRecipe" onClick={getRecipe}>
+            <button
+              className="showRecipe"
+              onClick={getRecipe}
+              onDoubleClick={handleDounbleClick}
+            >
               Get a recipe
             </button>
           </div>

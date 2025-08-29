@@ -5,6 +5,7 @@
   font-weight: 400;
   padding: 30px;
 }
+
 .suggested-recipe-container p:is(:nth-of-type(2), :nth-of-type(3)) {
   margin-top: 10px;
   font-size: 2rem;
@@ -16,4 +17,13 @@
 .suggested-recipe-container ul li,
 .suggested-recipe-container ol li {
   margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .suggested-recipe-container {
+    padding: 15px;
+  }
+  .suggested-recipe-container h2,
+  .suggested-recipe-container p:is(:nth-of-type(2), :nth-of-type(3)) {
+    font-size: 24px;
+  }
 }
